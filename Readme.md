@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Андрей Тисов](https://up.htmlacademy.ru/php/4/user/535477).
-* Наставник: `Неизвестно`.
+* Наставник: `Павел Кузнецов`(https://htmlacademy.ru/profile/id417075).
 
 ---
 
