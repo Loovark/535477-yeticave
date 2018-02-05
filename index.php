@@ -46,6 +46,15 @@ $lots_list = [
     ]
 ];
 
+function set_price($price) {
+    $price = ceil($price) . " " . "₽";
+
+    if ($price > 1000) {
+        $price = number_format(ceil($price), 0, ',', ' ') . " " . "₽";
+    }
+    return $price;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -137,11 +146,7 @@ $lots_list = [
                             <div class="lot__rate">
                                 <span class="lot__amount">Стартовая цена</span>
                                 <span class="lot__cost">
-                                    <?php if ($lot['price'] > 1000): ?>
-                                        <?= number_format(ceil($lot['price']), 0, ',', ' ') . " " . "₽"; ?>
-                                    <?php else: ?>
-                                        <?= ceil($lot['price']) . " " . "₽"; ?>
-                                    <?php endif; ?>
+                                        <?= set_price($lot['price']); ?>
                                 </span>
                             </div>
                             <div class="lot__timer timer">
