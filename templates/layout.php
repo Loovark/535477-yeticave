@@ -1,3 +1,12 @@
+<?php
+
+$is_auth = (bool) rand(0, 1);
+
+$user_name = 'Константин';
+$user_avatar = 'img/user.jpg';
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -46,19 +55,21 @@
     </div>
 </header>
 
-<main class="container"><?= $main; ?></main>
+<main class="container">
+    <?= $main; ?>
+</main>
 
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
             <?php
-                $catigories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
-                $cat_count = count($catigories);
+                $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+                $cat_count = count($categories);
                 $index = 0;
             ?>
             <?php while ($index < $cat_count): ?>
                 <li class="nav__item">
-                    <a href="all-lots.html"><?= $catigories[$index]; ?></a>
+                    <a href="all-lots.html"><?= $categories[$index]; ?></a>
                     <?php $index = $index + 1; ?>
                 </li>
             <?php endwhile; ?>

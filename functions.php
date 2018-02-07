@@ -1,16 +1,18 @@
 <?php
 
-function get_template($filename, $array) {
+function get_template($file_name, $array) {
 
-    if ($filename[true]) {
-        require_once();
-
-        return($filename);
+    if (file_exists($file_name)) {
+        ob_start();
+        require_once($file_name);
+        $content = ob_get_clean();
+        array($array);
     }
     else {
-        print "";
+        $content = '';
     }
 
+    return($content);
 }
 
 ?>
