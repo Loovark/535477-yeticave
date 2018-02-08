@@ -1,13 +1,10 @@
 <?php
 
 $is_auth = (bool) rand(0, 1);
-
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 
-
 $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
-
 $lots_list = [
     [
         'name' => '2014 Rossignol District Snowboard',
@@ -47,25 +44,23 @@ $lots_list = [
     ]
 ];
 
-function set_price($price) {
-    $price = ceil($price) . " " . "₽";
-
-    if ($price > 1000) {
-        $price = number_format(ceil($price), 0, ',', ' ') . " " . "₽";
-    }
-    return $price;
-}
-
 require_once ('functions.php');
 
-$main = get_template('templates\index.php', ['lots' => $lots_list ]);
+$main = get_template('templates\index.php', [
+    'lots' => $lots_list
+]);
 
-$layout = get_template('templates\layout.php', ['content' => $main]);
+$layout = get_template('templates\layout.php', [
+    'main' => $main,
+    'title' => 'Главная',
+    'is_auth' => $is_auth,
+    'user_name' => $user_name,
+    'user_avatar' => $user_avatar,
+    'categories' => $categories
+]);
 
 
 
 print ($layout);
 
 
-
-?>
