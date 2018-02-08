@@ -58,12 +58,9 @@ function set_price($price) {
 
 require_once ('functions.php');
 
-$main = get_template('templates\index.php', ['lots_list' => $lots_list]);
-$layout = get_template('templates\layout.php', [
-    'main' => $main,
-    'categories' => $categories,
-    'title' => 'YetiCave - Главная страница'
-]);
+$main = get_template('templates\index.php', ['lots' => $lots_list ]);
+
+$layout = get_template('templates\layout.php', ['content' => $main]);
 
 
 
