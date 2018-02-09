@@ -1,6 +1,4 @@
 <?php
-require_once('index.php');
-
 
 function get_template($file_name, $array) {
     $content = '';
@@ -9,7 +7,6 @@ function get_template($file_name, $array) {
         extract($array);
         require_once($file_name);
         $content = ob_get_clean();
-
     }
     return($content);
 }

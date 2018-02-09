@@ -5,6 +5,7 @@ $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 
 $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+
 $lots_list = [
     [
         'name' => '2014 Rossignol District Snowboard',
@@ -47,15 +48,15 @@ $lots_list = [
 require_once ('functions.php');
 
 $main = get_template('templates\index.php', [
-    'lots' => $lots_list
+    'lots_list' => $lots_list,
 ]);
 
 $layout = get_template('templates\layout.php', [
-    'main' => $main,
     'title' => 'Главная',
     'is_auth' => $is_auth,
     'user_name' => $user_name,
     'user_avatar' => $user_avatar,
+    'main' => $main,
     'categories' => $categories
 ]);
 

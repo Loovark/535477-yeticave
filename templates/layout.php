@@ -53,12 +53,11 @@
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-            <?php while ($index < $cat_count): ?>
+            <?php foreach ($categories as $category): ?>
                 <li class="nav__item">
-                    <a href="all-lots.html"><?= $categories[$index]; ?></a>
-                    <?php $index = $index + 1; ?>
+                    <a href="all-lots.html"><?= $category; ?></a>
                 </li>
-            <?php endwhile; ?>
+            <?php endforeach; ?>
         </ul>
     </nav>
     <div class="main-footer__bottom container">
