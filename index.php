@@ -47,11 +47,11 @@ $lots_list = [
 
 require_once ('functions.php');
 
-$main = get_template('templates\index.php', [
+$main = render_template('templates\index.php', [
     'lots_list' => $lots_list,
 ]);
 
-$layout = get_template('templates\layout.php', [
+$layout = render_template('templates\layout.php', [
     'title' => 'Главная',
     'is_auth' => $is_auth,
     'user_name' => $user_name,
