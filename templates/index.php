@@ -44,6 +44,7 @@
                                 </span>
                             </div>
                             <div class="lot__timer timer">
+                                <?= time_counter (); ?>
                             </div>
                         </div>
                     </div>
