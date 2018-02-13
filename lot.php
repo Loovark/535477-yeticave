@@ -4,11 +4,11 @@ require_once ('lots_list.php');
 
 $lot = null;
 
-if (isset($_GET['lot_id'])) {
-    $lot_id = $_GET['lot_id'];
+if (isset($_GET['id'])) {
+    $lot = $lot_list[$_GET['id']];
 
     foreach ($lots_list as $item) {
-        if ($item['lot_id'] == $lot_id) {
+        if ($item['id'] == $lots_list['id']) {
             $lot = $item;
             break;
         }
@@ -19,11 +19,11 @@ if (!$lot) {
     http_response_code(404);
 }
 
-$main = render_template('templates\index.php', [
-    'lots_list' => $lots_list,
+$main = render_template('templates\info.php', [
+    'lot' => $lot
 ]);
 $layout = render_template('templates\layout.php', [
-    'title' => 'Главная',
+    'title' => 'Информация о лоте',
     'is_auth' => $is_auth,
     'user_name' => $user_name,
     'user_avatar' => $user_avatar,
