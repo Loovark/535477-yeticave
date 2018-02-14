@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 require_once ('lots_list.php');
 
 require_once ('functions.php');

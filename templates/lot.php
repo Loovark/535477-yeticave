@@ -1,6 +1,6 @@
 <section class="lot-item container">
     <?php if (isset($lot)): ?>
-    <h2><?=htmlspecialchars($lot['title']);?></h2>
+    <h2><?=htmlspecialchars($lot['name']);?></h2>
     <div class="lot-item__content">
         <div class="lot-item__left">
             <div class="lot-item__image">
@@ -88,6 +88,8 @@
             </div>
         </div>
     </div>
+    <?php else: ?>
+        <h1>Лот не найден.</h1>
     <?php endif; ?>
 </section>
 

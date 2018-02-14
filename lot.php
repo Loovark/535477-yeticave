@@ -4,22 +4,17 @@ require_once ('lots_list.php');
 
 $lot = null;
 
+$id = $lots_list[$_GET['id']] ?? http_response_code(404);
 if (isset($_GET['id'])) {
-    $lot = $lot_list[$_GET['id']];
-
-    foreach ($lots_list as $item) {
-        if ($item['id'] == $lots_list['id']) {
-            $lot = $item;
+    foreach ($lots_list as $id => $info) {
+        if ($id == $_GET['id']) {
+            $lot = $info;
             break;
         }
     }
 }
 
-if (!$lot) {
-    http_response_code(404);
-}
-
-$main = render_template('templates\info.php', [
+$main = render_template('templates\lot.php', [
     'lot' => $lot
 ]);
 $layout = render_template('templates\layout.php', [
