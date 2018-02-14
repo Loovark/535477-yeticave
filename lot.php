@@ -1,6 +1,6 @@
 <?php
 require_once('functions.php');
-require_once ('lots_list.php');
+require_once ('data.php');
 
 $lot = null;
 
