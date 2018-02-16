@@ -1,11 +1,11 @@
 <?php
 require_once('functions.php');
-require_once ('data.php');
+require_once('data.php');
 
 $lot = array_key_exists($_GET['id'], $lots_list) ? $lots_list[$_GET['id']] : null;
 if (!$lot) {
     http_response_code(404);
-exit;
+    exit;
 }
 
 $main = render_template('templates\lot.php', [
@@ -20,7 +20,6 @@ $layout = render_template('templates\layout.php', [
     'main' => $main,
     'categories' => $categories
 ]);
-
 
 
 print ($layout);
