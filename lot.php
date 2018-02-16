@@ -5,6 +5,7 @@ require_once ('data.php');
 $lot = null ?? $lots_list[$_GET['id']];
 if (!$lot) {
     http_response_code(404);
+exit;
 }
 
 $main = render_template('templates\lot.php', [

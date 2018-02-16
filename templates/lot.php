@@ -1,13 +1,13 @@
 <section class="lot-item container">
-    <?php if (isset($lot)): ?>
-    <h2><?=htmlspecialchars($lot['name']);?></h2>
+    <?php if ((isset($lot)) && (!empty($lot))): ?>
+    <h2><?= htmlspecialchars($lot['name']);?></h2>
     <div class="lot-item__content">
         <div class="lot-item__left">
             <div class="lot-item__image">
                 <img src="<?= $lot['image']; ?>" width="730" height="548" alt="<?= $lot['alt']; ?>">
             </div>
             <p class="lot-item__category">Категория: <span><?= $lot['category']; ?></span></p>
-            <p class="lot-item__description"><?=htmlspecialchars($lot['description']);?></p>
+            <p class="lot-item__description"><?= htmlspecialchars($lot['description']);?></p>
         </div>
         <div class="lot-item__right">
             <div class="lot-item__state">
