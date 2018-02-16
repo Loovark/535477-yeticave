@@ -1,5 +1,5 @@
 <section class="lot-item container">
-    <?php if ((isset($lot)) && (!empty($lot))): ?>
+    <?php if (!empty($lot)): ?>
     <h2><?= htmlspecialchars($lot['name']);?></h2>
     <div class="lot-item__content">
         <div class="lot-item__left">
