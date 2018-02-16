@@ -2,7 +2,7 @@
 require_once('functions.php');
 require_once ('data.php');
 
-$lot = null ?? $lots_list[$_GET['id']];
+$lot = array_key_exists($_GET['id'], $lots_list) ? $lots_list[$_GET['id']] : null;
 if (!$lot) {
     http_response_code(404);
 exit;
