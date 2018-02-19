@@ -4,17 +4,9 @@ require_once('data.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $lot = $_POST;
+    $err = [];
 
-    if (isset($_FILES['photo_img']['name'])) {
-        $path = $_FILES['photo_img']['name'];
-        $res = move_uploaded_file($_FILES['photo_img']['tmp_name'], 'img/' . $path);
-    }
-
-    if (isset($path)) {
-        $lot['path'] = $path;
-    }
-
-    $main = render_template('view.php', ['lot' => $lot]);
+    $main = render_template('lot.php', ['lot' => $lot]);
 }
 else {
     $main = render_template('templates\add.php', []);
