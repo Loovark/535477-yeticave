@@ -1,5 +1,5 @@
 <?php
-$is_auth = (bool) rand(0, 1);
+$is_auth = (bool)rand(0, 1);
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 
@@ -21,7 +21,10 @@ $lots_list = [
                 позволит уверенно держать высокие скорости. А если к концу катального дня сил совсем не останется,
                 просто
                 посмотрите на Вашу доску и улыбнитесь, крутая графика от Шона Кливера еще никого не оставляла
-                равнодушным.'
+                равнодушным.',
+        'lot-rate' => '',
+        'lot-step' => '',
+        'lot-date' => ''
     ],
     [
         'name' => 'DC Ply Mens 2016/2017 Snowboard',
@@ -29,7 +32,10 @@ $lots_list = [
         'price' => 159999,
         'image' => 'img/lot-2.jpg',
         'alt' => 'Сноуборд',
-        'description' => ''
+        'description' => '',
+        'lot-rate' => '',
+        'lot-step' => '',
+        'lot-date' => ''
     ],
     [
         'name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
@@ -37,7 +43,10 @@ $lots_list = [
         'price' => 8000,
         'image' => 'img/lot-3.jpg',
         'alt' => 'Крепления',
-        'description' => ''
+        'description' => '',
+        'lot-rate' => '',
+        'lot-step' => '',
+        'lot-date' => ''
     ],
     [
         'name' => 'Ботинки для сноуборда DC Mutiny Charocal',
@@ -45,7 +54,10 @@ $lots_list = [
         'price' => 10999,
         'image' => 'img/lot-4.jpg',
         'alt' => 'Ботинки',
-        'description' => ''
+        'description' => '',
+        'lot-rate' => '',
+        'lot-step' => '',
+        'lot-date' => ''
     ],
     [
         'name' => 'Куртка для сноуборда DC Mutiny Charocal',
@@ -53,7 +65,10 @@ $lots_list = [
         'price' => 7500,
         'image' => 'img/lot-5.jpg',
         'alt' => 'Куртка',
-        'description' => ''
+        'description' => '',
+        'lot-rate' => '',
+        'lot-step' => '',
+        'lot-date' => ''
     ],
     [
         'name' => 'Маска Oakley Canopy',
@@ -61,14 +76,17 @@ $lots_list = [
         'price' => 5400,
         'image' => 'img/lot-6.jpg',
         'alt' => 'Маска',
-        'description' => ''
+        'description' => '',
+        'lot-rate' => '',
+        'lot-step' => '',
+        'lot-date' => ''
     ]
 ];
 
 // ставки пользователей, которыми надо заполнить таблицу
 $bets = [
-    ['name' => 'Иван', 'price' => 11500, 'ts' => strtotime('-' . rand(1, 50) .' minute')],
-    ['name' => 'Константин', 'price' => 11000, 'ts' => strtotime('-' . rand(1, 18) .' hour')],
-    ['name' => 'Евгений', 'price' => 10500, 'ts' => strtotime('-' . rand(25, 50) .' hour')],
+    ['name' => 'Иван', 'price' => 11500, 'ts' => strtotime('-' . rand(1, 50) . ' minute')],
+    ['name' => 'Константин', 'price' => 11000, 'ts' => strtotime('-' . rand(1, 18) . ' hour')],
+    ['name' => 'Евгений', 'price' => 10500, 'ts' => strtotime('-' . rand(25, 50) . ' hour')],
     ['name' => 'Семён', 'price' => 10000, 'ts' => strtotime('last week')]
 ];
